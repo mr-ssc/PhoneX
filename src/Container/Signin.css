@@ -1,0 +1,324 @@
+/* Signin Container */
+.Signin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900PX;
+    background-image: url(Img/Gallery-bg\ .jpg);
+    background-size: cover;
+    width: 100%;
+    float: left;
+}
+
+/* Signin Box */
+.Signin-box {
+    position: relative;
+    width: 550px;
+    height: 550px;
+    background: black;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.Signin-box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.Signin-box::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+.Signin-borderLine {
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+
+.Signin-borderLine::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(0deg, transparent, transparent, #ff2770, #ff2770, #ff2770);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+
+.Signin-borderLine::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(0deg, transparent, transparent, #ff2770, #ff2770, #ff2770);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Signin Form */
+.Signin-box form {
+    position: absolute;
+    inset: 7px;
+    background: black;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.Signin-box form h2 {
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 10px;
+    font-size: 30px;
+}
+
+/* Input Box */
+.Signin-inputBox {
+    position: relative;
+    width: 450px;
+    margin-top: 35px;
+}
+
+.Signin-inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #23242a;
+    font-size: 20px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.Signin-inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 20px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.Signin-inputBox input:valid~span,
+.Signin-inputBox input:focus~span {
+    color: #fff;
+    font-size: 15px;
+    transform: translateY(-35px);
+}
+
+.Signin-inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.Signin-inputBox input:valid~i,
+.Signin-inputBox input:focus~i {
+    height: 44px;
+}
+
+/* Links Section */
+.Signin-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Signin-links a {
+    margin: 30px 0;
+    font-size: 2em;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+.Signin-links a:hover,
+.Signin-links a:nth-child(2) {
+    color: #fff;
+}
+
+/* Checkbox Section */
+.Signin-checkbox-group {
+    font-size: 20px;
+    color: white;
+    margin-top: 30px;
+}
+
+.Signin-checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Submit Button */
+.Sign-btn button {
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background: #ff2770;
+    color: white;
+    padding: 10px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.Sign-btn button:hover {
+    color: white;
+    background: #45f3ff;
+}
+
+
+.google-signin button {
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background: #ff2770;
+    color: white;
+    padding: 10px;
+    font-weight: 800;
+    text-align: center;
+  }
+  
+  .google-signin button:hover {
+    background-color: #357ABD;
+  }
+
+
+
+.Signin-box form input[type="submit"]:active {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Signin-box {
+        width: 70%;
+        /* Reduce width for smaller screens */
+        height: 520px;
+        /* Allow height to adjust based on content */
+        margin-top: 20px;
+        /* Add padding for better spacing */
+    }
+
+   
+    .Signin-box form {
+        padding: 30px 20px;
+        /* Reduce padding for smaller screens */
+    }
+
+    .Signin-box form h2 {
+        font-size: 2em;
+        /* Reduce font size for smaller screens */
+    }
+
+    .Signin-inputBox {
+        width: 100%;
+        /* Full width for input boxes */
+    }
+
+    .Signin-inputBox input {
+        font-size: 1.5em;
+        /* Reduce font size for smaller screens */
+    }
+
+    .Signin-inputBox span {
+        font-size: 1.5em;
+        /* Reduce font size for smaller screens */
+    }
+
+    .Signin-links a {
+        font-size: 1.5em;
+        /* Reduce font size for smaller screens */
+    }
+
+    .Sign-btn button {
+        font-size: 16px;
+        /* Reduce font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .Signin-box {
+        width: 95%;
+        /* Further reduce width for very small screens */
+    }
+
+    .Signin-box form h2 {
+        font-size: 1.5em;
+        /* Further reduce font size */
+    }
+
+    .Signin-inputBox input {
+        font-size: 1.2em;
+        /* Further reduce font size */
+    }
+
+    .Signin-inputBox span {
+        font-size: 1.2em;
+        /* Further reduce font size */
+    }
+
+    .Signin-links a {
+        font-size: 20px;
+        /* Further reduce font size */
+    }
+
+    .Sign-btn button {
+        font-size: 14px;
+        /* Further reduce font size */
+    }
+}
