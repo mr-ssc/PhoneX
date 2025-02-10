@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Signin.css";
 import Navbar from "./Navbar";
 
+
 function Signin() {
 
   return (
@@ -31,7 +32,7 @@ function Signin() {
                 type="password"
                 required="required"
                 value=""
-                //onCha//nge={(e) => setPassword(e.target.value)}
+              //onCha//nge={(e) => setPassword(e.target.value)}
               />
               <span>Enter Your Password</span>
               <i></i>
@@ -46,14 +47,14 @@ function Signin() {
               <button type="submit">Login</button>
             </div>
 
-           
+
 
             <div className="Signin-links">
               <a href="/Forgotpassword">Forgot Password</a>
               <a href="/Signup">Sign Up</a>
             </div>
 
-           
+
           </form>
         </div>
       </div>

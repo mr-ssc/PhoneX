@@ -1,0 +1,46 @@
+/* src/Marquee.css */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    position: relative;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); 
+  }
+  
+  .marquee-content {
+    display: inline-block;
+    animation: marquee-scroll 25s linear infinite; /* Adjust speed here */
+    
+  }
+  
+  .marquee-content img {
+    height: auto;
+    max-width: 100%;
+    width: 500px;
+    height: 350px;
+    margin-right: 20px; /* Adjust spacing between images */
+  }
+  
+  /* Marquee Animation */
+  @keyframes marquee-scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .marquee-content img {
+      max-width: 80%; /* Adjust image size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .marquee-content img {
+      max-width: 60%; /* Further adjust image size for mobile screens */
+    }
+  }

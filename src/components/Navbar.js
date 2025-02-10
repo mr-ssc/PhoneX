@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css"; // Import the CSS file
 import { useNavigate } from "react-router-dom"; // For navigation
+import logo from "../components/Img/Navbar-logo.png"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +17,7 @@ const Navbar = () => {
       {/* Left Side: Logo */}
       <div className="logo">
         <a href="/">
-          <img src="" alt="Logo" />
+          <img src={logo} alt="Logo" />
         </a>
       </div>
 
