@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Hero from './Hero';
 import Footer from './Footer';
 import Marquee from './Marquee';
+import Shoping from './Shoping';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <Navbar />
             <Hero />
             <Marquee />
+            <Shoping />
 
 
             <Footer />

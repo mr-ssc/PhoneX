@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Signup from './components/Signup';
 import Footer from './components/Footer';
 import Marquee from './components/Marquee';
+import Shoping from './components/Shoping';
 
 
 
@@ -31,10 +32,11 @@ function App() {
         <Route path='/Signup' element={<Signup />}></Route>
         <Route path='/Footer' element={<Footer />}></Route>
         <Route path='/marquee' element={<Marquee />}></Route>
+        <Route path='Shoping' element={<Shoping />}></Route>
 
 
 
-      </Routes>
+    </Routes >
 
     </>
   );
